@@ -38,6 +38,11 @@
     <section id="requirements">
       <h2>Requirements</h2>
       <p>An Enterprise subscription plan is required for Okta SSO and Okta provisioning.</p>
+      <p>
+        While in development, Okta integration can only be accessed in Velaro by setting the "dev"
+        localStorage flag to 'true'. Enter the following in the developer console while under the app.velaro.com domain:
+      </p>
+      <p><code>localStorage.setItem('dev', 'true')</code></p>
     </section>
 
     <section id="configuration">
@@ -49,7 +54,11 @@
           <p>Generate an API Token by clicking the "refresh" icon next to the API Token field.</p>
           <p><img src="images/scim01.png"></p>
         </li>
-        <li><p>Copy the generated API Token to your clipboard.</p></li>
+        <li>
+          <p>Enable provisioning features, and paste the Base URL and the API Token into the Provisioning tab in Okta.</p>
+          <p><img src="images/scim02.png"></p>
+        </li>
+        <li><p>Click the "Test API Credentials" button to verify the token and base URL are configured correctly.</p></li>
       </ol>
     </section>
   </div>
